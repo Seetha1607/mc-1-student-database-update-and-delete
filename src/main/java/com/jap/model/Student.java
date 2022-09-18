@@ -7,6 +7,8 @@
 
 package com.jap.model;
 
+import java.util.Objects;
+
 public class Student {
 
     private int rollNumber;
@@ -44,5 +46,18 @@ public class Student {
 
     public void setGrades(int grades) {
         this.grades = grades;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Student student = (Student) o;
+        return rollNumber == student.rollNumber && grades == student.grades && Objects.equals(name, student.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(rollNumber, name, grades);
     }
 }
