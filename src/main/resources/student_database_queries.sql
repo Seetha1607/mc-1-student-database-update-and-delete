@@ -48,18 +48,8 @@ insert into `school`.`student`(`roll_number`,`name`,`grades`,`total_marks`) valu
    '665'
 );
 
---Insert values into the table of student5:
-insert into `school`.`student` (`roll_number`, `name`, `grades`, `total_marks`) values
-(
-   '16',
-   'Johnny',
-   '91',
-   '678'
-);
-
 --deleted student details by roll number:
 delete from `school`.`student` where (`roll_number` = ?);
 
---update roll_number by total_marks:
-update `school`.`student` set `roll_number` = '?' where (`total_marks` = '?');
-
+--update name,grades and total marks by roll number:
+update `school`.`student` set `name` = ?,`grades`= ?,`total_marks`= ? where (`roll_number` = ? );
