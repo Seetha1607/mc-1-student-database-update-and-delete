@@ -8,6 +8,7 @@
 package com.jap.model;
 
 import java.util.Objects;
+import java.util.StringJoiner;
 
 public class Student {
 
@@ -59,5 +60,14 @@ public class Student {
     @Override
     public int hashCode() {
         return Objects.hash(rollNumber, name, grades);
+    }
+
+    @Override
+    public String toString() {
+        return new StringJoiner(", ", Student.class.getSimpleName() + "[", "]")
+                .add("rollNumber=" + rollNumber)
+                .add("name='" + name + "'")
+                .add("grades=" + grades)
+                .toString();
     }
 }
