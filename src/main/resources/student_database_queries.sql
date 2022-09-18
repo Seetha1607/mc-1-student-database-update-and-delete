@@ -1,19 +1,19 @@
 -- Create a database called `school`.
-create DATABASE IF NOT EXISTS `school`;
+create database if not exists school;
 
 --use the database.
-USE `school`;
+use `school`;
 
 --create a table if not exists called `student`.
-create TABLE IF NOT EXISTS `school`.`student`
+create table if not exists `school`.`student`
 (
    roll_number int not null primary key auto_increment,
    name varchar(25) not null,
-   grades in not null
+   grades int not null
 );
 
 --Insert values into the table of student1:
-insert into `school`.`student`(`roll_number`,`name`) VALUES
+insert into `school`.`student`(`roll_number`,`name`,`grades`) VALUES
 (
    '1',
    'John',
@@ -21,7 +21,7 @@ insert into `school`.`student`(`roll_number`,`name`) VALUES
 );
 
 --Insert values into the table of student2:
-insert into `school`.`student`(`roll_number`,`name`) VALUES
+insert into `school`.`student`(`roll_number`,`name`,`grades`) VALUES
 (
    '2',
    'Harry',
@@ -29,7 +29,7 @@ insert into `school`.`student`(`roll_number`,`name`) VALUES
 );
 
 --Insert values into the table of student3:
-NSERT INTO `school`.`student`(`roll_number`,`name`) VALUES
+NSERT INTO `school`.`student`(`roll_number`,`name`,`grades`) VALUES
 (
    '3',
    'Lydia',
