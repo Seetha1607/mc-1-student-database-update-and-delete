@@ -64,10 +64,6 @@ public class Student {
 
     @Override
     public String toString() {
-        return new StringJoiner(", ", Student.class.getSimpleName() + "[", "]")
-                .add("rollNumber=" + rollNumber)
-                .add("name='" + name + "'")
-                .add("grades=" + grades)
-                .toString();
+        return new StringJoiner(", ", Student.class.getSimpleName() + "[", "]").add("rollNumber=" + rollNumber).add("name='" + name + "'").add("grades=" + grades).toString();
     }
 }
