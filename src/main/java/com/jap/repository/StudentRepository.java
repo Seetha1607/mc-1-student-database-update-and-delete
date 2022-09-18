@@ -23,7 +23,6 @@ public class StudentRepository {
         }
         return numberOfRowsAffected > 0;
     }
-
     public boolean updateStudentData(Connection connection, int updateRollNumber, double totalMarks) throws SQLException {
         String updateQuery = "UPDATE `school`.`student` set `roll_number` = '15' where (`roll_number` = '16');";
         int numberOfRowsAffected;
