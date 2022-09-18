@@ -61,5 +61,5 @@ insert into `school`.`student` (`roll_number`, `name`, `grades`, `total_marks`) 
 delete from `school`.`student` where (`roll_number` = ?);
 
 --update roll_number by total_marks:
-update `school`.`student` set `roll_number` = '15' where (`roll_number` = '16');
+update `school`.`student` set `roll_number` = '?' where (`total_marks` = '?');
 
